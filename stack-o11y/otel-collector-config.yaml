@@ -29,4 +29,6 @@ service:
       exporters: [debug]
     logs:
       receivers: [otlp]
+      #Note(marcos): it really does nothing, i guess it's because its definition is empty
+      processors: [batch]
       exporters: [debug, otlphttp/logs]
